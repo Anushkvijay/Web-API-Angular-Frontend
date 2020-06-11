@@ -15,4 +15,16 @@ export class EntryService {
     createEntry(entry){
       return this.http.post(this.baseUrl,entry);
     }
+
+    updateEntry(id,entry){
+      return this.http.put(this.baseUrl+'/'+id,entry);
+    }
+
+    getEntry(id){
+      return this.http.get(this.baseUrl+'/'+id);
+    }
+
+    deleteEntry(id){
+      return this.http.delete(this.baseUrl+'/'+id);
+    }
 }

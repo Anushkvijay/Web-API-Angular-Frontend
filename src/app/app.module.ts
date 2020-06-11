@@ -17,6 +17,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UpdateEntryComponent } from './update-entry/update-entry.component';
+import { DeleteEntryComponent } from './delete-entry/delete-entry.component';
+import { MatListModule } from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
@@ -24,15 +29,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     EntriesComponent,
     HeaderComponent,
     FooterComponent,
-    NewEntryComponent
+    NewEntryComponent,
+    UpdateEntryComponent,
+    DeleteEntryComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,MatTableModule,ReactiveFormsModule,MatSelectModule,MatCardModule,MatInputModule,MatButtonModule,
-    AppRouterModule,MatToolbarModule,
+    AppRouterModule,MatToolbarModule,MatDialogModule,MatListModule,
     BrowserAnimationsModule
     
   ],
+  entryComponents:[UpdateEntryComponent],
   providers: [EntryService],
   bootstrap: [AppComponent]
 })
