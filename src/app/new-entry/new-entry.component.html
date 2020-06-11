@@ -1,1 +1,19 @@
-<p>new-entry works!</p>
+<mat-card>
+    <span>Create New Entry</span>
+    <form [formGroup] = "entryForm" (ngSubmit) = "onSubmit()">
+        <mat-form-field >
+            <input matInput placeholder="Entry Description" formControlName ="description" >
+        </mat-form-field>
+        <mat-form-field >
+            <mat-select placeholder="Entry type" formControlName ="isExpense">   
+                <mat-option *ngFor ="let type of types" [value] = "type.value">
+                    {{type.display}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field >
+            <input matInput placeholder="Entry value" formControlName ="value">
+        </mat-form-field>
+        <button mat-raised-button type="submit" >Create New</button>
+    </form>
+</mat-card>

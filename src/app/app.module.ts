@@ -11,7 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { NewEntryComponent } from './new-entry/new-entry.component'; 
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -23,8 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,MatTableModule,ReactiveFormsModule,
-    AppRouterModule,
+    HttpClientModule,MatTableModule,ReactiveFormsModule,MatSelectModule,MatCardModule,MatInputModule,MatButtonModule,
+    AppRouterModule,MatToolbarModule,
     BrowserAnimationsModule
     
   ],
